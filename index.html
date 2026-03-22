@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+<meta charset="UTF-8">
+<title>Pro Random App Advanced 🎲</title>
+<link rel="stylesheet" href="style.css">
+<link rel="manifest" href="manifest.json">
+<meta name="theme-color" content="#00f7ff">
+</head>
+<body>
+
+<div id="home" class="page active container">
+    <h1>🎮 اختر النوع</h1>
+    <button onclick="showPage('wheel')">🎡 عجلة</button>
+    <button onclick="showPage('teams')">👥 قرعة فرق</button>
+</div>
+
+<div id="wheel" class="page container">
+    <h2>🎡 العجلة</h2>
+    <textarea id="namesWheel" placeholder="كل اسم في سطر"></textarea><br>
+    <button onclick="spin()">🚀 تدوير</button>
+    <button onclick="showPage('home')">⬅ رجوع</button>
+    <div class="arrow"></div>
+    <canvas id="canvas" width="300" height="300"></canvas>
+    <h2 id="result"></h2>
+</div>
+
+<div id="teams" class="page container">
+    <h2>👥 قرعة الفرق</h2>
+    <textarea id="namesTeams" placeholder="كل اسم في سطر"></textarea><br>
+    <input type="number" id="numTeams" placeholder="عدد الفرق">
+    <input type="number" id="playersPerTeam" placeholder="عدد اللاعبين لكل فريق"><br>
+    <button onclick="makeTeams()">⚡ قسم الفرق</button>
+    <button onclick="saveGroup()">💾 حفظ المجموعة</button>
+    <select id="savedGroups"></select>
+    <button onclick="loadGroup()">📂 تحميل</button>
+    <button onclick="deleteGroup()">❌ حذف</button>
+    <button onclick="showPage('home')">⬅ رجوع</button>
+    <div id="teamsResult"></div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>

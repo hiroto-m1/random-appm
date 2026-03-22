@@ -1,0 +1,15 @@
+{
+  "name": "Random App Pro",
+  "short_name": "RandomApp",
+  "start_url": "index.html",
+  "display": "standalone",
+  "background_color": "#0f0f1a",
+  "theme_color": "#00f7ff",
+  "icons": [
+    {
+      "src": "images/icon.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    }
+  ]
+}
